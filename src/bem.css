@@ -8,12 +8,23 @@ body {
 
 #buttonPanel {
 	padding-top: 10px;
+	width: 15%;
+	background-color: #bfbfbf;
 }
 
 #cards {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+}
+
+#cardDropdown{
+	display: flex;
+	justify-content: center;
+}
+
+#cardDropdown label{
+	padding-right: 5px;
 }
 
 .card, .card--dark {
