@@ -2,6 +2,20 @@ body {
 	display: flex;
 }
 
+#app {
+	display: flex;
+}
+
+#buttonPanel {
+	padding-top: 10px;
+}
+
+#cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 .card, .card--dark {
 	height: 330px;
 	width: 330px;
