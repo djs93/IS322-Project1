@@ -14,11 +14,9 @@ const mockDatabase = [
 ];
 
 function renderCards(cards) {
-    const cardHTML = cards.map((result) => {
+    return cards.map((result) => {
         return <Card desc={result.desc} price={result.price} title={result.title} />;
     });
-
-    return cardHTML;
 }
 
 function App() {
