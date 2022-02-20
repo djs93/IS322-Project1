@@ -27,6 +27,7 @@
         "react/jsx-indent": "off",
         "react/forbid-prop-types": "off",
         "react/jsx-indent-props": "off",
-        "brace-style": ["error", "stroustrup"]
+        "brace-style": ["error", "stroustrup"],
+        "linebreak-style": "off"
     }
 }
