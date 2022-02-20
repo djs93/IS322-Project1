@@ -114,6 +114,7 @@ body {
 	}
 	#buttonPanel{
 		width: 175px;
+		flex-direction: column;
 	}
 	.card, .card--dark {
 		height: 330px;
@@ -139,6 +140,17 @@ body {
 		 margin: 10px 15px;
 		 flex-direction: column;
 	 }
+
+	#buttonPanel{
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 10px;
+		justify-content: center;
+	}
+
+	#cardDropdown{
+		margin: 0 10px;
+	}
 	.card__content {
 		width: 100%;
 		height: 220px;
