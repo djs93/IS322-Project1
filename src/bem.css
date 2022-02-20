@@ -4,19 +4,22 @@ body {
 
 #app {
 	display: flex;
+	flex-direction: row;
 }
 
 #buttonPanel {
-	padding-top: 10px;
-	width: 15%;
+	padding: 10px 10px 0 10px;
 	background-color: #bfbfbf;
 	border-radius: 10px;
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 #cards {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	flex-grow: 1;
 }
 
 #cardDropdown{
@@ -26,6 +29,10 @@ body {
 
 #cardDropdown label{
 	padding-right: 5px;
+}
+
+#root{
+	width: 100%;
 }
 
 .card, .card--dark {
