@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../bem.css';
-
-function Card({title, desc, price}) {
+/* eslint-disable-next-line object-curly-newline */
+function Card({title, desc, price, onSale}) {
     return (
         <div className="card">
             <div className="card__content" />
@@ -12,7 +12,7 @@ function Card({title, desc, price}) {
                     {title}
                 </div>
 
-                <div className="card__price">
+                <div className={onSale ? 'card__price-sale' : 'card__price'}>
                     ${price}
                 </div>
             </div>
@@ -30,11 +30,13 @@ Card.propTypes = {
     title: PropTypes.string,
     desc: PropTypes.string,
     price: PropTypes.number,
+    onSale: PropTypes.bool,
 };
 Card.defaultProps = {
     title: 'world!',
     desc: '',
     price: -1,
+    onSale: false,
 };
 
 export default Card;

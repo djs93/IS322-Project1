@@ -62,6 +62,13 @@ body {
 	flex: 0 0 30px;
 }
 
+.card__price-sale {
+	padding: 10px 15px 0;
+	font-weight: 700;
+	color: #2db23f;
+	flex: 0 0 30px;
+}
+
 .card__body, .card__body--big {
 	padding: 10px 15px;
 	font-weight: 200;
