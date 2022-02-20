@@ -33,7 +33,7 @@
     function orderBy(sortValue) {
         // Sort method varies based on what type of value we're sorting
         const sortedResults = (sortValue === 'name')
-            ? mockDatabase.sort((a, b) => { // Strings need to be sorted in a slightly more compldex way
+            ? mockDatabase.sort((a, b) => { // Strings need to be sorted in a slightly more complex way
                 const nameA = a.name.toUpperCase(); // ignore upper and lowercase
                 const nameB = b.name.toUpperCase(); // ignore upper and lowercase
                 // Sorts alphabetically.  -1 puts it before. 1 puts it after
