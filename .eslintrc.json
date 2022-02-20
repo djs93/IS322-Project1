@@ -18,6 +18,10 @@
         "react"
     ],
     "rules": {
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "object-curly-spacing": ["error", "never"],
+        "no-underscore-dangle": "off",
+        "arrow-body-style": ["error", "always"],
+        "max-len": "off"
     }
 }
