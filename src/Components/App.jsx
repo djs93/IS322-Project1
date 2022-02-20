@@ -17,19 +17,27 @@ const mockDatabase = [
     {title: 'Article 9', price: 8},
 ];
 
-function renderCards(cards) {
-    return cards.map((result) => {
+function renderCards(cards, filters) {
+    let filteredCards = [...cards];
+    if (filters) {
+        // eslint-disable-next-line guard-for-in,no-restricted-syntax,no-unused-vars
+        Object.values(filters).forEach((filterFunc) => {
+            filteredCards = filterFunc(filteredCards);
+        });
+    }
+    return filteredCards.map((result) => {
         return <Card desc={result.desc} price={result.price} title={result.title} onSale={result.onSale} />;
     });
 }
 
 function App() {
     const [stateCards, setCards] = useState(mockDatabase);
+    const [stateFilters, setFilters] = useState([]);
     return (
         <div id="app">
-            <ButtonPanel cardDB={stateCards} changeCards={setCards} />
+            <ButtonPanel cardDB={stateCards} changeCards={setCards} setFilters={setFilters} filters={stateFilters} />
             <div id="cards">
-                {renderCards(stateCards)}
+                {renderCards(stateCards, stateFilters)}
             </div>
         </div>
     );
