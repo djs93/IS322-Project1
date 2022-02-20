@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Card from './Card';
+import ButtonPanel from './ButtonPanel';
+import '../bem.css';
 
 const mockDatabase = [
     {desc: 'Sale!', title: 'Article 1', price: 1},
@@ -23,7 +25,7 @@ function App() {
     const [stateCards, setCards] = useState(mockDatabase);
     return (
         <div id="app">
-            <div id="buttons" />
+            <ButtonPanel cardDB={stateCards} changeCards={setCards} />
             <div id="cards">
                 {renderCards(stateCards)}
             </div>
