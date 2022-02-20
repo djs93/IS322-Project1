@@ -116,6 +116,9 @@ body {
 		width: 175px;
 		flex-direction: column;
 	}
+	#cardDropdown{
+		margin-bottom: 10px;
+	}
 	.card, .card--dark {
 		height: 330px;
 		width: 330px;
