@@ -4,11 +4,31 @@ import '../bem.css';
 import CardSortDropdown from './CardSortDropdown';
 import CardToggleFilter from './CardToggleFilter';
 import {ToggleOnSale} from '../ToggleFunctions';
+import CardFilterDropdown from './CardFilterDropdown';
+import { FilterByComponentType } from '../FilterFunctions';
 /* eslint-disable-next-line object-curly-newline */
 function ButtonPanel({cardDB, changeCards, filters, setFilters}) {
     return (
         <div id="buttonPanel">
             <CardSortDropdown changeCards={changeCards} cardDB={cardDB} />
+            <CardFilterDropdown
+                filters={filters}
+                setFilters={setFilters}
+                toggleText="Component Type"
+                toggleName="compType"
+                filterOptions={{
+                    // eslint-disable-next-line brace-style
+                    All: (cards) => { return FilterByComponentType(cards, 'all'); },
+                    // eslint-disable-next-line brace-style
+                    CPU: (cards) => { return FilterByComponentType(cards, 'cpu'); },
+                    // eslint-disable-next-line brace-style
+                    GPU: (cards) => { return FilterByComponentType(cards, 'gpu'); },
+                    // eslint-disable-next-line brace-style
+                    Motherboard: (cards) => { return FilterByComponentType(cards, 'motherboard'); },
+                    // eslint-disable-next-line brace-style
+                    Memory: (cards) => { return FilterByComponentType(cards, 'memory'); },
+                }}
+            />
             <CardToggleFilter
                 filters={filters}
                 setFilters={setFilters}
