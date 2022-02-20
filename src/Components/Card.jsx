@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../bem.css';
 /* eslint-disable-next-line object-curly-newline */
-function Card({title, desc, price, onSale}) {
+function Card({title, desc, price, onSale, imgLocation}) {
     return (
         <div className="card">
-            <div className="card__content" />
+            <img src={imgLocation} alt="Card" className="card__content" />
 
             <div className="card__title_and_price">
                 <div className="card__title">
@@ -31,12 +31,14 @@ Card.propTypes = {
     desc: PropTypes.string,
     price: PropTypes.number,
     onSale: PropTypes.bool,
+    imgLocation: PropTypes.string,
 };
 Card.defaultProps = {
     title: 'world!',
     desc: '',
     price: -1,
     onSale: false,
+    imgLocation: '/images/no-image.webp',
 };
 
 export default Card;
