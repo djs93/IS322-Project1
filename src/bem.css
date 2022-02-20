@@ -163,6 +163,17 @@ body {
 	#app {
 		flex-direction: column;
 	}
+
+	#buttonPanel{
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 10px;
+		justify-content: center;
+	}
+	#cardDropdown{
+		margin: 0 10px;
+	}
+
 	.card, .card--dark {
 		height: 100px;
 		width: 100%;
