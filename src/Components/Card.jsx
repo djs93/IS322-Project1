@@ -5,9 +5,7 @@ import '../bem.css';
 function Card({title, desc, price, onSale, imgLocation}) {
     return (
         <div className="card">
-            <div className="card__content">
-                <img src={imgLocation} alt="Card" />
-            </div>
+            <img src={imgLocation} alt="Card" className="card__content" />
 
             <div className="card__title_and_price">
                 <div className="card__title">

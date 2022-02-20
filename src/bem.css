@@ -50,6 +50,8 @@ body {
 	border: 3px solid #333;
 	margin: 10px 15px;
 	display: flex;
+	background-color: #eeeeee;
+	justify-content: flex-end;
 }
 .card__content {
 	background-color: #bfbfbf;
@@ -59,20 +61,25 @@ body {
 	padding: 10px 15px;
 	font-weight: 700;
 	color: #666;
+	background-color: #eeeeee;
 }
 
 .card__price {
-	padding: 10px 0;
+	padding: 10px 10px;
 	font-weight: 700;
 	color: #666;
-	flex: 0 0 30px;
+	flex: 0 0 80px;
+	background-color: #eeeeee;
+	text-align: end;
 }
 
 .card__price-sale {
-	padding: 10px 0;
+	padding: 10px 10px;
 	font-weight: 700;
 	color: #2db23f;
-	flex: 0 0 30px;
+	flex: 0 0 80px;
+	background-color: #eeeeee;
+	text-align: end;
 }
 
 .card__body, .card__body--big {
@@ -80,6 +87,7 @@ body {
 	font-weight: 200;
 	color: #333;
 	flex: 0 0 20px;
+	background-color: #eeeeee;
 }
 
 .card__body--big {
@@ -119,6 +127,7 @@ body {
 		width: 100%;
 		height: 220px;
 		flex: 1 1 auto;
+		object-fit: cover;
 	}
 }
 /* tablet */
@@ -127,15 +136,16 @@ body {
 		flex-direction: column;
 	}
 	.card, .card--dark {
-		height: 330px;
-		width: 330px;
-		margin: 10px 15px;
-		flex-direction: column;
-	}
+		 height: 330px;
+		 width: 330px;
+		 margin: 10px 15px;
+		 flex-direction: column;
+	 }
 	.card__content {
 		width: 100%;
-		height: 100%;
+		height: 220px;
 		flex: 1 1 auto;
+		object-fit: cover;
 	}
 }
 /* phone */
@@ -153,10 +163,6 @@ body {
 		min-width: 35vw;
 		height: 100%;
 		flex: 1 1 auto;
-	}
-	.card__content img {
-		width: 100%;
-		height: 100%;
 		object-fit: cover;
 	}
 	.card__title_and_price, .card__body{
