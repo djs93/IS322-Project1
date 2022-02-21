@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../bem.css';
 
 // eslint-disable-next-line object-curly-newline
-function CardFilterDropdown({filters, setFilters, toggleText, toggleName, filterOptions}) {
+function CardFilterDropdown({filters, setFilters, toggleText, filterOptions}) {
     return (
         <div className="card_filter_dropdown">
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -39,7 +39,6 @@ CardFilterDropdown.propTypes = {
     filters: PropTypes.array,
     setFilters: PropTypes.func,
     toggleText: PropTypes.string,
-    toggleName: PropTypes.string,
     filterOptions: PropTypes.object,
 };
 CardFilterDropdown.defaultProps = {
@@ -48,7 +47,6 @@ CardFilterDropdown.defaultProps = {
         console.warn('setFilters function not passed to CardFilterDropdown!!');
     },
     toggleText: '',
-    toggleName: '',
     filterOptions: {},
 };
 

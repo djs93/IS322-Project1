@@ -5,7 +5,7 @@ import CardSortDropdown from './CardSortDropdown';
 import CardToggleFilter from './CardToggleFilter';
 import {ToggleOnSale} from '../ToggleFunctions';
 import CardFilterDropdown from './CardFilterDropdown';
-import { FilterByComponentType } from '../FilterFunctions';
+import {FilterByComponentType} from '../FilterFunctions';
 /* eslint-disable-next-line object-curly-newline */
 function ButtonPanel({cardDB, changeCards, filters, setFilters}) {
     return (
