@@ -50,6 +50,7 @@ CardSortDropdown.propTypes = {
 };
 CardSortDropdown.defaultProps = {
     cardDB: [],
+    // eslint-disable-next-line brace-style
     changeCards: () => { console.warn('changeCard function not passed to ButtonPanel!!'); },
 };
 
